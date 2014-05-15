@@ -1,7 +1,7 @@
 {
-  "name": "durandal",
+  "name": "mimosa-durandal",
   "version": "0.0.1",
-  "description": "A Mimosa starter skeleton",
+  "description": "A Mimosa Durandal starter skeleton",
   "devDependencies": {
     "mimosa-less": "*"
   }

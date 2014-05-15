@@ -18,15 +18,11 @@ exports.config = {
   },
   vendor: {
     javascripts: 'app/vendor',
-    stylesheets: 'css/vendor'
+    stylesheets: 'app/css/vendor'
   },
   bower: {
     copy: {
-      mainOverrides: {
-        "jasmine": [
-          "lib/jasmine-core"
-        ]
-      }
+      unknownMainFullCopy: true
     }
   }
 }

@@ -14,7 +14,8 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
             }
 
             var that = this;
-            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { tags: 'mount ranier', tagmode: 'any', format: 'json' }, 'jsoncallback').then(function(response) {
+            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne',
+             { tags: 'mount ranier', tagmode: 'any', format: 'json' }, 'jsoncallback').then(function(response) {
                 that.images(response.items);
             });
         },

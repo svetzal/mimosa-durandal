@@ -1,10 +1,10 @@
 {
-  "name": "durandal",
+  "name": "mimosa-durandal",
   "version": "0.1.0",
   "dependencies": {
-    "jquery": "2.0.3",
+    "jquery": "1.9.1",
     "requirejs": "2.1.8",
-    "knockout.js": "latest",
+    "knockout.js": "2.3.0",
     "bootstrap":"latest",
     "durandal":"latest",
     "text":"latest"
