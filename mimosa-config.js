@@ -18,10 +18,24 @@ exports.config = {
   },
   vendor: {
     javascripts: 'app/vendor',
-    stylesheets: 'app/css/vendor'
+    stylesheets: 'css/vendor'
   },
   bower: {
     copy: {
+      mainOverrides: {
+        "bootstrap": [
+          "docs/assets/js/bootstrap.js",
+          "docs/assets/css/bootstrap.css",
+          "docs/assets/css/bootstrap-responsive.css"
+        ],
+        "durandal": [
+          {
+            img: "../../images",
+            js: "durandal",
+            css: "durandal"
+          }
+        ]
+      },
       unknownMainFullCopy: true
     }
   }

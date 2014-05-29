@@ -1,0 +1,32 @@
+<section>
+    <h2>Set Up</h2>
+
+    <select data-bind="options: emitters, optionsText: 'name', value: selectedEmitter" multiple="true">
+    </select>
+
+    <button data-bind="click: newEmitter" class="btn">New</button>
+
+    <form class="form-horizontal" data-bind="if: selectedEmitter()">
+      <fieldset>
+        <legend>Emitter Details</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="name">Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="name" data-bind="value: selectedEmitter().name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="modulus">Modulus</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="modulus" data-bind="value: selectedEmitter().modulus">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="output">Output</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="output" data-bind="value: selectedEmitter().output">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+</section>
