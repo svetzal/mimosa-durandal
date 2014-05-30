@@ -14,9 +14,23 @@ define(['durandal/app', 'knockout', 'models/emitter'], function (app, ko, Emitte
     this.emitters.push(new Emitter("Woof Emitter", 7, "Woof"));
 
     this.newEmitter = function() {
+
       var emitter = new Emitter("Unnamed Emitter");
       this.emitters.push(emitter);
       this.selectedEmitter(emitter);
+      console.log(this.selectedEmitter);
+    }
+
+    this.removeEmitter = function() {
+
+      var selectedIndex = document.getElementById("selectSetup").selectedIndex;
+
+      if(this.emitters.length >= 0) {
+
+        this.emitters.splice(selectedIndex,1);
+
+      }
+
     }
   }
 
