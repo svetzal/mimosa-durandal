@@ -12,6 +12,9 @@ define(['knockout'], function(ko) {
       if (input % this.modulus === 0) {
         finalOutput = this.output;
       }
+      else{
+        finalOutput = "nothing but air";
+      }
 
       return finalOutput;
 
