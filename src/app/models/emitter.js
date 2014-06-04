@@ -5,21 +5,20 @@ define(['knockout'], function(ko) {
     this.modulus = ko.observable(modulus);
     this.output = ko.observable(output);
 
-    this.result = function(input) {
+    this.isInputModEqualToZero = function(input) {
 
-      var finalOutput = "";
+      var isModEqualToZero = false;
 
-      if (input % this.modulus === 0) {
-        finalOutput = this.output;
+      if (input % this.modulus() === 0) {
+
+        isModEqualToZero = true;
+
       }
-      else{
-        finalOutput = "nothing but air";
-      }
 
-      return finalOutput;
+      return isModEqualToZero;
 
-    }
-  }
+    };
+  };
 
   return Emitter;
 });

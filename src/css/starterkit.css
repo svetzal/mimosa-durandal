@@ -4,10 +4,6 @@
  * see: http://durandaljs.com or https://github.com/BlueSpire/Durandal for details
  */
 
-body{
-    font-size: 1.5em;
-}
-
 .splash {
     text-align: center;
     margin: 10% 0 0 0;
@@ -45,11 +41,6 @@ body{
 .loader {
     margin: 6px 8px 4px 8px;
     visibility: hidden;
-}
-
-
-.nbtn{
-    font-size: 200%;
 }
 
 .loader.active {

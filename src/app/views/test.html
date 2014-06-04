@@ -1,13 +1,13 @@
 <section>
-	<form>
+  <form>
       <fieldset>
         <legend>FizzBuzz Input</legend>
         <label for="numInput">Enter a number:</label>
-        <input maxlength="8" data-bind="value: val, valueUpdate: 'afterkeyup'" name="numInput" id="numInput"/>
+        <input maxlength="8" data-bind="value: numInput, valueUpdate: 'afterkeyup'" name="numInput" id="numInput"/>
       </fieldset>
     </form>
 
     <p>
-      Output: <strong data-bind="text: output"></strong>
+      Output: <strong data-bind="text: numOutput"></strong>
     </p>
 </section>
