@@ -2,7 +2,7 @@ define(['durandal/app', 'knockout','jquery','models/inputvalidator'], function (
 
   function Test() {
 
-  	var self = this;
+    var self = this;
 
 	self.numInput = ko.observable();
 

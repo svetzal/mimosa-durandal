@@ -2,7 +2,7 @@ define(['emitter_config','jquery','models/utilities'], function (emitterConfig, 
 
   var InputValidator = function() {
 
-  	var self = this;
+	var self = this;
 
 	self.emitters = emitterConfig.emitters;
 
