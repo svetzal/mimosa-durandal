@@ -12,6 +12,12 @@ define(['durandal/app', 'knockout','jquery','models/inputvalidator'], function (
 
 		var finalOutput = inputValidator.inputCheck(self.numInput());
 
+        if(finalOutput != "Not Valid Data"){
+            $('.output').addClass('alert-success').removeClass('alert-danger');
+        }
+        else{
+            $('.output').addClass('alert-danger').removeClass('alert-success');
+        }
 		return finalOutput;
 
 	}, this);
