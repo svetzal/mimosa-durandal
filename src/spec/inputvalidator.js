@@ -1,7 +1,11 @@
 define(['jasmine', 'emitter_config','jquery','models/utilities','models/inputvalidator'], function(jasmine, EmitterConfig, $, Utilities, InputValidator) {
     describe('InputValidator', function() {
 
-        var inputValidator = new InputValidator();
+        var inputValidator;
+
+        beforeEach(function() {
+          utility = = new InputValidator();
+        });
 
         it("should return Fizz if matches 3", function() {
             expect(inputValidator.inputCheck(3)).toEqual("Fizz");
