@@ -4,21 +4,35 @@ define(['durandal/app', 'knockout','jquery','models/inputvalidator'], function (
 
     var self = this;
 
-	self.numInput = ko.observable();
+    self.numInput = ko.observable();
 
-	var inputValidator = new InputValidator();
+    var inputValidator = new InputValidator();
 
-	self.numOutput = ko.computed(function() {
+    self.outputClass = ko.observable();
 
-		var finalOutput = inputValidator.inputCheck(self.numInput());
+    self.isValidInput = function() {
 
-        if(finalOutput != "Not Valid Data"){
-            $('.output').addClass('alert-success').removeClass('alert-danger');
-        }
-        else{
-            $('.output').addClass('alert-danger').removeClass('alert-success');
-        }
-		return finalOutput;
+      var isValid = false;
+
+      var output = inputValidator.inputCheck(self.numInput());
+
+      if(output != "Not Valid Data") {
+
+          isValid = true;
+
+      }
+
+      return isValid;
+
+    };
+
+    self.numOutput = ko.computed(function() {
+
+        self.outputClass = false;
+
+        var finalOutput = inputValidator.inputCheck(self.numInput());
+
+        return finalOutput;
 
 	}, this);
 
