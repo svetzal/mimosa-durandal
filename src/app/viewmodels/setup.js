@@ -1,7 +1,8 @@
-define(['durandal/app', 'knockout', 'models/emitter'], function (app, ko, Emitter) {
+define(['durandal/app', 'knockout', 'emitter_config', 'models/emitter'], function (app, ko, emitterConfig, Emitter) {
 
-  function SetUp() {
-    this.emitters = ko.observableArray();
+  var SetUp = function() {
+
+    this.emitters = emitterConfig.emitters;
 
     this.selectedEmitter = ko.observable();
 
@@ -9,16 +10,23 @@ define(['durandal/app', 'knockout', 'models/emitter'], function (app, ko, Emitte
     this.emitterModulus = ko.observable();
     this.emitterOutput = ko.observable();
 
-    this.emitters.push(new Emitter("Fizz Emitter", 3, "Fizz"));
-    this.emitters.push(new Emitter("Buzz Emitter", 5, "Buzz"));
-    this.emitters.push(new Emitter("Woof Emitter", 7, "Woof"));
-
     this.newEmitter = function() {
-      var emitter = new Emitter("Unnamed Emitter");
-      this.emitters.push(emitter);
-      this.selectedEmitter(emitter);
-    }
-  }
+
+      emitterConfig.newE();
+
+  };
+
+    this.removeEmitter = function() {
+
+      if (this.selectedEmitter()) {
+
+        this.emitters.remove(this.selectedEmitter());
+        console.log("removed: " + this.selectedEmitter());
+
+      }
+
+    };
+  };
 
   return new SetUp();
 });

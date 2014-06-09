@@ -1,2 +1,18 @@
-<section>
+<section class="container">
+  <div class="row">
+    <form role="form">
+      <div class="form-group">
+          <fieldset>
+            <legend>FizzBuzz Input</legend>
+            <label class="control-label " for="numInput">Enter a number:</label>
+            <input maxlength="8" data-bind="value: numInput, valueUpdate: 'afterkeyup'" name="numInput" id="numInput" class="form-control" placeholder="Enter a number">
+          </fieldset>
+        </form>
+      </div>
+
+     <!--  <p class="alert alert-danger output" data-bind="css: { 'alert-success': outputClass == true }"> -->
+      <p data-bind="css: isValidInput() == true ? 'alert alert-success output' : 'alert alert-danger output'">
+        Output: <strong data-bind="text: numOutput"></strong>
+      </p>
+    </div>
 </section>

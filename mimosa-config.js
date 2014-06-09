@@ -34,9 +34,11 @@ exports.config = {
             js: "durandal",
             css: "durandal"
           }
+        ],
+         "jasmine": [
+          "lib/jasmine-core"
         ]
-      },
-      unknownMainFullCopy: true
+      }
     }
   }
 }

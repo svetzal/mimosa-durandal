@@ -1,12 +1,13 @@
-<section>
-    <h2>Set Up</h2>
+<section class="container">
+    <div class="row">
+      <h2>Set Up</h2>
+      <select class="col-sm-2" id="selectSetup" data-bind="options: emitters, optionsText: 'name', value: selectedEmitter" multiple="true">
+      </select>
+      <button class="col-sm-4 nbtn" data-bind="click: newEmitter">New</button>
+      <button class="col-sm-4 nbtn" data-bind="click: removeEmitter">Remove</button>
+    </div>
 
-    <select data-bind="options: emitters, optionsText: 'name', value: selectedEmitter" multiple="true">
-    </select>
-
-    <button data-bind="click: newEmitter" class="btn">New</button>
-
-    <form class="form-horizontal" data-bind="if: selectedEmitter()">
+    <form class="row form-horizontal" data-bind="if: selectedEmitter()">
       <fieldset>
         <legend>Emitter Details</legend>
         <div class="form-group">
